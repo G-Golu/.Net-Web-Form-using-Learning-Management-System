@@ -1,14 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-public partial class Sign_Up_Page : System.Web.UI.Page
+protected void btnSignup_Click(object sender, EventArgs e)
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
+    string name = txtName.Text.Trim();
+    string email = txtEmail.Text.Trim();
+    string password = txtPassword.Text;
+    string confirmPassword = txtConfirmPassword.Text;
 
+    if (password != confirmPassword)
+    {
+        lblMessage.Text = "Passwords do not match!";
+        return;
     }
+
+    // Database logic yahan aayega – for now dummy response
+    // You can later connect to SQL Server and store this info in Users table
+
+    lblMessage.ForeColor = System.Drawing.Color.Green;
+    lblMessage.Text = "Registration Successful!";
 }
