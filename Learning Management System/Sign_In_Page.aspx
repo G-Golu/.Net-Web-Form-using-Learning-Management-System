@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Sign In Page</title>
@@ -7,7 +7,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e9eff1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,10 +15,10 @@
         }
 
         .container {
-            background-color: white;
+            background-color: #ffffff;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             width: 400px;
             text-align: center;
         }
@@ -37,9 +37,10 @@
         }
 
         .logo h1 {
-            font-size: 24px;
+            font-size: 26px;
             margin: 0;
             font-weight: bold;
+            color: #2c3e50;
         }
 
         .header {
@@ -54,26 +55,28 @@
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .btn-signin {
-            background-color: green;
+            background-color: #2980b9;
             color: white;
         }
 
         .btn-signup {
-            background-color: darkred;
+            background-color: #c0392b;
             color: white;
         }
 
         h2 {
             font-size: 20px;
             margin-bottom: 10px;
+            color: #34495e;
         }
 
         p {
             font-size: 14px;
-            color: #555;
+            color: #666;
             margin-bottom: 20px;
         }
 
@@ -86,6 +89,7 @@
             display: block;
             font-size: 14px;
             margin-bottom: 5px;
+            color: #333;
         }
 
         .form-group input {
@@ -102,9 +106,14 @@
             font-size: 16px;
             border: none;
             border-radius: 5px;
-            background-color: black;
+            background-color: #2c3e50;
             color: white;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #1a252f;
         }
 
         .forgot-password {
@@ -113,8 +122,12 @@
         }
 
         .forgot-password a {
-            color: blue;
+            color: #2980b9;
             text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -128,7 +141,6 @@
 
             <div class="header">
                 <button type="button" class="btn-signin">Sign In</button>
-                &nbsp;&nbsp;
                 <button type="button" class="btn-signup">Sign Up</button>
             </div>
 
@@ -148,9 +160,10 @@
             <asp:Button ID="btnSignIn" runat="server" CssClass="btn-submit" Text="Sign In" />
 
             <div class="forgot-password">
-                Do you have forgotten your password? <a href="#">Click me</a>
+                Forgot your password? <a href="Forget_Password.aspx">Click here</a>
             </div>
         </div>
     </form>
 </body>
 </html>
+
