@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-public partial class Forget_Password : System.Web.UI.Page
+protected void btnSubmit_Click(object sender, EventArgs e)
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
+    string email = txtEmail.Text;
 
+    // Dummy check (replace with DB check)
+    if (email == "admin@example.com")
+    {
+        // You can generate OTP or reset link here
+        lblMessage.Text = "Password reset link has been sent to your email.";
+    }
+    else
+    {
+        lblMessage.Text = "Email not found.";
     }
 }
