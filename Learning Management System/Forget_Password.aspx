@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Forget_Password.aspx.cs" Inherits="Forget_Password" %>
-
-
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Forget_Password.aspx.cs" Inherits="Forget_Password" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,19 +13,10 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-         <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
         }
         .form-container {
             background: #fff;
-            padding: 220px 380px;
+            padding: 50px 30px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 400px;
@@ -67,6 +56,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            background: green;
+            color: white;
         }
         .form-container .submit-button {
             width: 100%;
@@ -92,6 +83,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 0.9em;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -105,7 +97,7 @@
 
             <div class="otp-group">
                 <input type="text" id="otp" name="otp" placeholder="Enter OTP" />
-                <button type="button" style="background: green; color: white;">Submit</button>
+                <button type="button">Submit</button>
             </div>
             <div class="resend-timer">Resend in : 00:46 sec</div>
             <button type="button" class="resend-button">Resend</button>
@@ -121,3 +113,4 @@
     </form>
 </body>
 </html>
+
